@@ -10,14 +10,23 @@
     <h1>Without Buttons</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
-</body>
-<script>
-    let start=document.querySelector('#start')
-    let stop=document.querySelector('#stop')
-    let head=document.querySelector('h1')
 
-    start.addEventListener('click',function(){
-        
-    },false)
-</script>
+    <script>
+        let start = document.querySelector('#start');
+        let stopp = document.querySelector('#stop');
+        let head = document.querySelector('h1');
+        let begin;
+
+        start.addEventListener('click', function () {
+            begin = setInterval(() => {
+                console.log("Event Started");
+            }, 1000);
+        }, false);
+
+        stopp.addEventListener('click', function () {
+            clearInterval(begin);
+            console.log("Event Stopped");
+        }, false);
+    </script>
+</body>
 </html>
