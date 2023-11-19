@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body style="background-color: black;">
+    <h1 style="color: aliceblue;" id="text">Before change</h1>
+    <button id="bttn">change text</button>
+
+    
+
+
+</body>
+
+<script>
+    let btn= document.querySelector('#bttn')
+
+    let txt= document.querySelector('#text')
+    btn.addEventListener('click',function(e){
+        setTimeout(() => {
+            txt.innerHTML="After Change"
+            txt.style.color="red"
+        }, 3000);
+    },false)
+</script>
+
+</html>
